@@ -78,6 +78,21 @@ body {
 .stat:nth-child(2) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
+.stat:nth-child(2),
+.stat:nth-child(4) {
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+}
+
 .footer {
+  width: 1050px;
+}
+.copyright {
   display: flex;
+  justify-content: space-between;
+}
+.footer__text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  margin: 20px 0;
 }
