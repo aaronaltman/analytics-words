@@ -1,3 +1,4 @@
+/* Setting CSS back to Default so no style */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,6 +17,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
+/* CSS for background */
 .background {
   top: 0;
   position: absolute;
@@ -29,6 +31,7 @@ body {
     ),
     url("public/images/cloud-background.avif");
 }
+/* CSS for heading */
 .first-heading {
   font-size: 3.5rem;
   font-weight: 700;
@@ -38,7 +41,7 @@ body {
   letter-spacing: 5px;
 }
 .first-heading--special {
-  font-weight: 500;
+  font-weight: 300;
 }
 .container {
   width: 1050px;
