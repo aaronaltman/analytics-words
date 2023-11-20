@@ -99,3 +99,11 @@ body {
   color: #333;
   margin: 20px 0;
 }
+
+/* CSS for Mobile Responsive */
+@media screen and (max-width: 1050px) {
+  .container {
+    width: 80vw;
+    flex-direction: column;
+  }
+}
