@@ -38,4 +38,8 @@ textAreaEl.addEventListener("input", function () {
     displayTwitter.classList.remove("stat__number--limit");
     displayFacebook.classList.remove("stat__number--limit");
   }
+  if (textAreaEl.value.includes("<script>")) {
+    alert("You can't use script tag in this text area");
+    textAreaEl.value = "try again";
+  }
 });

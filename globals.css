@@ -1,126 +1,150 @@
-/* Setting CSS back to Default so no style */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
 textarea {
   all: unset;
 }
+
 body {
   font-family: "Inter", sans-serif;
-  font-size: 1.5rem;
-  line-height: 1.5;
-  color: #333;
   background-color: #e1e8eb;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* CSS for background */
 .background {
-  top: 0;
   position: absolute;
+  top: 0;
   z-index: -1;
-  height: 280px;
+  height: 254px;
   width: 100%;
   background-image: linear-gradient(
       to right,
       rgba(101, 0, 163, 0.9),
       rgba(24, 120, 175, 0.9)
     ),
-    url("public/images/cloud-background.avif");
+    url("/public/images/cloud-background.avif");
 }
 
-/* CSS for heading */
 .first-heading {
-  font-size: 3.5rem;
-  font-weight: 700;
-  color: #ffffffe0;
-  margin-top: 2rem;
-  text-transform: uppercase;
+  font-size: 65px;
   letter-spacing: 5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+  margin-top: 75px;
 }
+
 .first-heading--special {
   font-weight: 300;
 }
-/* CSS for container */
+
 .container {
   width: 1050px;
   height: 520px;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
-  margin-top: 50px;
-  overflow: hidden;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 55px;
   display: flex;
-  justify-content: space-between;
+  overflow: hidden;
 }
-/* CSS for textarea */
+
 .textarea {
   resize: none;
+  flex: 2;
   font: inherit;
-  font-size: 1.2rem;
   padding: 30px 40px;
-  white-space: pre-wrap;
+  font-size: 22px;
 }
+
 .textarea::placeholder {
   font-weight: 500;
-  color: #333;
-  font-size: 1.2rem;
+  color: #959c9f;
 }
-/* CSS for stats */
+
 .stats {
-  background-color: rgb(246, 255, 255);
+  flex: 1.3;
+  background-color: #f1f6f8;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
 }
+
 .stat {
-  padding: 20px 30px;
-  font-size: 1.2rem;
+  flex: 1 150px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.stat__number--limit {
-  color: red;
-}
-.second-heading {
-  font-size: 1.2rem;
-  font-weight: 500;
 }
 
 .stat:nth-child(1),
 .stat:nth-child(2) {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-}
-.stat:nth-child(2),
-.stat:nth-child(4) {
-  border-left: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-/* CSS for footer */
+.stat:nth-child(2),
+.stat:nth-child(4) {
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.stat__number {
+  color: #4d5457;
+  font-weight: 600;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.stat__number--limit {
+  color: red;
+}
+
+.second-heading {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #747a7c;
+}
 
 .footer {
   width: 1050px;
-}
-.copyright {
+  margin: 15px 0;
   display: flex;
   justify-content: space-between;
-}
-.footer__text {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #333;
-  margin: 20px 0;
+  opacity: 0.4;
 }
 
-/* CSS for Mobile Responsive */
-@media screen and (max-width: 1050px) {
+@media (max-width: 1150px) {
   .container {
-    width: 80vw;
+    width: 85vw;
     flex-direction: column;
+  }
+
+  .first-heading {
+    font-size: 7vw;
+  }
+
+  .stat {
+    padding: 15px 10px;
+  }
+
+  .stat:nth-child(1),
+  .stat:nth-child(2),
+  .stat:nth-child(4) {
+    border: none;
+  }
+
+  .stat__number {
+    font-size: 20px;
+  }
+
+  .footer {
+    width: initial;
+    flex-direction: column;
+    align-items: center;
   }
 }
