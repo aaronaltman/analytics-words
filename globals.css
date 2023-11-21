@@ -144,7 +144,8 @@ body {
 
   .footer {
     width: initial;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
   }
 }
