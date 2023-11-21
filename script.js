@@ -4,7 +4,7 @@ const displayFacebook = document.querySelector(".stat__number--facebook");
 const displayTwitter = document.querySelector(".stat__number--twitter");
 const displayWords = document.querySelector(".stat__number--words");
 
-textAreaEl.addEventListener("input", function () {
+const inputHandler = () => {
   /* here is the characters */
   const numberOfCharacters = textAreaEl.value.length;
   const displayCharacters = document.querySelector(".stat__number--characters");
@@ -42,4 +42,6 @@ textAreaEl.addEventListener("input", function () {
     alert("You can't use script tag in this text area");
     textAreaEl.value = "try again";
   }
-});
+};
+
+textAreaEl.addEventListener("input", inputHandler);
