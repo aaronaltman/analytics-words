@@ -17,12 +17,13 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
 /* CSS for background */
 .background {
   top: 0;
   position: absolute;
   z-index: -1;
-  height: 254px;
+  height: 280px;
   width: 100%;
   background-image: linear-gradient(
       to right,
@@ -31,6 +32,7 @@ body {
     ),
     url("public/images/cloud-background.avif");
 }
+
 /* CSS for heading */
 .first-heading {
   font-size: 3.5rem;
@@ -43,6 +45,7 @@ body {
 .first-heading--special {
   font-weight: 300;
 }
+/* CSS for container */
 .container {
   width: 1050px;
   height: 520px;
@@ -50,32 +53,34 @@ body {
   border-radius: 12px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
   margin-top: 50px;
-  display: flex;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
 }
+/* CSS for textarea */
 .textarea {
   resize: none;
-  flex: 2;
   font: inherit;
+  font-size: 1.2rem;
   padding: 30px 40px;
-  width: 100%; /* Adjust width as needed */
-  white-space: pre-wrap; /* This allows text to wrap to the next line */
-  overflow-x: auto; /* Scrollbar appears only when text overflows */
+  white-space: pre-wrap;
 }
 .textarea::placeholder {
   font-weight: 500;
   color: #333;
+  font-size: 1.2rem;
 }
+/* CSS for stats */
 .stats {
   background-color: rgb(246, 255, 255);
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 .stat {
   padding: 20px 30px;
+  font-size: 1.2rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -95,6 +100,8 @@ body {
 .stat:nth-child(4) {
   border-left: 1px solid rgba(0, 0, 0, 0.5);
 }
+
+/* CSS for footer */
 
 .footer {
   width: 1050px;

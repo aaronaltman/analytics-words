@@ -22,8 +22,11 @@ textAreaEl.addEventListener("input", function () {
 
   /* here is the words */
   const numberOfWords = textAreaEl.value.split(" ").length;
-  const displayWords = document.querySelector(".stat__number--words");
+  let displayWords = document.querySelector(".stat__number--words");
   displayWords.textContent = numberOfWords;
+  if (numberOfCharacters === 0) {
+    displayWords.textContent = 0;
+  }
 
   // set visual cues
   if (numberOfTwitter < 0) {
